@@ -12,3 +12,9 @@ pip install Pillow
 ```
 
 ![](/CaptureCalendar.jpg)
+
+## Contributor
+
+<a href="https://github.com/alankarartist/ALCALENDAR/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=alankarartist/ALCALENDAR" />
+</a>
