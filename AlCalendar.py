@@ -5,8 +5,10 @@ from datetime import datetime
 from PIL import ImageTk, Image
 import os
 import calendar
+import platform
 
 cwd = os.path.dirname(os.path.realpath(__file__))
+systemName = platform.system()
 
 
 class AlCalendar():
@@ -15,7 +17,8 @@ class AlCalendar():
         root.geometry("400x250+1500+765")
         root.resizable(0, 0)
         iconPath = os.path.join(cwd+'\\UI\\icons', 'alcalendar.ico')
-        iconPath = iconPath.replace('\\','/')
+        if systemName == 'Darwin':
+            iconPath = iconPath.replace('\\','/')
         root.iconbitmap(iconPath)
         root.config(bg="#222222")
         root.overrideredirect(1)
