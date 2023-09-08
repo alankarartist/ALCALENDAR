@@ -5,7 +5,6 @@ from datetime import datetime
 from PIL import ImageTk, Image
 import os
 import calendar
-import platform
 
 cwd = os.path.dirname(os.path.realpath(__file__))
 
