@@ -8,7 +8,6 @@ import calendar
 import platform
 
 cwd = os.path.dirname(os.path.realpath(__file__))
-systemName = platform.system()
 
 
 class AlCalendar():
@@ -17,8 +16,6 @@ class AlCalendar():
         root.geometry("400x250+1500+765")
         root.resizable(0, 0)
         iconPath = os.path.join(cwd+'\\UI\\icons', 'alcalendar.ico')
-        if systemName == 'Darwin':
-            iconPath = iconPath.replace('\\','/')
         root.iconbitmap(iconPath)
         root.config(bg="#222222")
         root.overrideredirect(1)
@@ -89,8 +86,7 @@ class AlCalendar():
         titleBar.bind("<Button-3>", showScreen)
         titleBar.bind("<Map>", screenAppear)
 
-        if systemName == 'Windows':
-            liftWindow()
+        liftWindow()
         root.mainloop()
 
 
